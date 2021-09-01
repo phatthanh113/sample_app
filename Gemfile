@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 git_source(:github){|repo| "https://github.com/#{repo}.git"}
-
+gem "bcrypt", "3.1.11"
+gem "config"
 ruby "2.7.1"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "bootstrap-sass", "3.4.1"
