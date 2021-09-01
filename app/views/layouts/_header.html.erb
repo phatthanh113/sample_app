@@ -1,7 +1,6 @@
   <header class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
       <%= link_to t(".logo"), "#", id: "logo" %>
-      
       <nav>
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to t(".home"), home_path %></li>
@@ -9,9 +8,9 @@
           <li><%= link_to t(".log_in"), "#" %></li>
           <li>
             <span>
-            <%= link_to t("en"), locale: :en %>
-            <%= link_to t("vi"), locale: :vi %>
-          </span>
+              <%= link_to t("en"), locale: :en %>
+              <%= link_to t("vi"), locale: :vi %>
+            </span>
         </li>
       </ul>
     </nav>
