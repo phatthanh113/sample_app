@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     concern :paginatable do
       get "(page/:page)", action: :index, on: :collection, as: ""
     end
-    root "static_pages#home"
+    root "sessions#new"
 
     get "home", to: "static_pages#home"
     get "help", to: "static_pages#help"
@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
-    resources :account_activations, only: :edit
+    resources :account_activations, only: %i(edit)
+    resources :password_resets, except: %i(show index destroy)
   end
 end
