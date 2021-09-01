@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :load_user, except: %i(create new index)
   before_action :correct_user, only: %i(edit update show)
   before_action :current_user_admin, only: %i(destroy)
-  
+
   def index
     @users = User.page(params[:page]).per(Settings.show_limit.show_5)
   end
@@ -15,9 +15,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      log_in @user
-      flash[:success] = t ".welcome_home"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = ".check_email_activated"
+      redirect_to login_path
     else
       render :new
     end
@@ -71,8 +71,8 @@ class UsersController < ApplicationController
   def correct_user
     redirect_to(root_url) unless current_user? @user
   end
-  
-  def current_user_admin?
+
+  def current_user_admin
     flash[:warning] = t ".denied_destroy"
     redirect_to(root_url) unless current_user.admin?
   end

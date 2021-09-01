@@ -36,13 +36,16 @@ en:
       all_users : "All users"
     new:
       sign_up: "Sign Up"
+      submit_create: "Create account"
+    edit:
+      submit_change: "Save changes"
+    show:
+      user_not_found: "User not found"
+    form:
       name: "Name"
       email: "Email"
       password: "Password"
       password_confirmation: "Confirmation Password"
-      submit: "Submit"
-    show:
-      user_not_found: "User not found"
   shared:
     error_message:
       the_form_contains: "The form contains"
