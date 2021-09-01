@@ -8,6 +8,9 @@ vi:
       home: "Trang chủ"
       help: "Trợ giúp"
       log_in: "Đăng nhập"
+      profile: "Trang cá nhân"
+      settings: "Cài đặt"
+      log_out: "Đăng xuất"
   static_pages:
     home:
       home: "Trang chủ"
@@ -37,3 +40,19 @@ vi:
       error: 
         one: "%{count} lỗi"
         other: "%{count} lỗi"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "không được để trống"
+  sessions:
+    create:
+      invalid_email_password_combination : "Sai email hoặc mật khẩu"
+    new:
+      email: "Email"
+      password: "Mật khẩu"
+      log_in: "Đăng nhập"
+      new_user: "Tài khoản mới?"
+      sign_up_now: "Đăng kí ngay!"
