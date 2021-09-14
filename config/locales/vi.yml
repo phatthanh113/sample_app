@@ -2,6 +2,13 @@ vi:
   title: "Hướng dẫn ứng dụng Ruby on Rails cơ bản"
   english: "Tiếng Anh"
   vietname: "Tiếng Việt"
+  views:
+    pagination:
+      first: "« ĐẦU"
+      last: "CUỐI »"
+      previous: "‹ TRƯỚC"
+      next: "SAU ›"
+      truncate: "…"
   layouts:
     header:
       logo: "Sample App"
@@ -25,6 +32,8 @@ vi:
       get_help_link: "Rails Tutorial help page"
       book_help_link: "Ruby on Rails Tutorial Book"
   users:
+    index:
+      all_users : "Danh sách người dùng"
     new:
       sign_up: "Đăng kí"
       name: "Tên"
