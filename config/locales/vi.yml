@@ -36,13 +36,16 @@ vi:
       all_users : "Danh sách người dùng"
     new:
       sign_up: "Đăng kí"
+      submit_create: "Tạo tài khoản"
+    edit:
+      submit_change: "Xác nhận thay đổi"
+    show:
+      user_not_found: "Không tìm thấy user"
+    form:
       name: "Tên"
       email: "Email"
       password: "Mật khẩu"
       password_confirmation: "Xác nhận mật khẩu"
-      submit: "Xác nhận"
-    show:
-      user_not_found: "Không tìm thấy user"
   shared:
     error_message: 
       the_form_contains: "Biểu mẫu này có"
